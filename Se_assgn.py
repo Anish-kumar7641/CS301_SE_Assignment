@@ -19,7 +19,7 @@ def login():
         else:
             print("Invalid username or password. Please try again.")
 
-# Function to display the available art forms and allow the user to choose one
+
 
 def select_art_form():
     print("\nSelect an art form:")
@@ -138,10 +138,10 @@ class TestArtForms(unittest.TestCase):
 
 
 
-#API:
+
 @app.route('/data', methods=['GET'])
 def get_data():
-    # Get the data from the request
+    
     global login_info,art_forms
     data = request.get_json()
 
@@ -170,7 +170,6 @@ def get_data():
     else:
         print("invalid input")
 
-    # Return a success message
     return jsonify({'message': 'program execution successful'})
 
 app.run(debug=True)
